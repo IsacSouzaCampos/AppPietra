@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">AppPietra</string>
+    <string name="headerInserir">Inserir</string>
+    <string name="textViewNome">Nome</string>
+    <string name="textViewQuantidade">Quantidade</string>
+    <string name="buttonInserir">Inserir</string>
 </resources>
