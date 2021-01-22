@@ -1,6 +1,8 @@
 package com.example.apppietra;
 
-public class Produto {
+import java.io.Serializable;
+
+public class Produto implements Serializable {
     private String nome;
     private int quantidade;
 
@@ -25,5 +27,10 @@ public class Produto {
 
     public void setQuantidade(int quantidade) {
         this.quantidade = quantidade;
+    }
+
+    @Override
+    public String toString() {
+        return nome;
     }
 }

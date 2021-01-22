@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class PietraActivity extends AppCompatActivity {
+public class InserirActivity extends AppCompatActivity {
     private EditText nome;
     private EditText quantidade;
     private ProdutoDataAccessObject dao;
@@ -15,7 +15,7 @@ public class PietraActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_pietra);
+        setContentView(R.layout.activity_inserir);
 
         getSupportActionBar().hide();
 
@@ -25,10 +25,13 @@ public class PietraActivity extends AppCompatActivity {
     }
 
     public void salvar(View view) {
+        String nomeProduto = nome.getText().toString();
         Produto produto = new Produto();
-        produto.setNome(nome.getText().toString());
+        produto.setNome(nomeProduto);
         produto.setQuantidade(Integer.parseInt(quantidade.getText().toString()));
-        long id = dao.inserir(produto);
-        Toast.makeText(this, "Produto inserido com id: " + id, Toast.LENGTH_SHORT).show();
+        dao.inserir(produto);
+        Toast.makeText(this, "Produto inserido: " + nomeProduto,
+                Toast.LENGTH_SHORT).show();
+        finish();
     }
 }
