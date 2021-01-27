@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menuItemExcluir"
+        android:title="@string/Excluir"
+        android:onClick="excluir" />
+    <item
+        android:id="@+id/menuItemAtualizar"
+        android:title="@string/Atualizar"
+        android:onClick="atualizar" />
+</menu>

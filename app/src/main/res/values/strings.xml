@@ -1,9 +1,12 @@
 <resources>
     <string name="app_name">AppPietra</string>
-    <string name="headerInserir">Inserir</string>
-    <string name="textViewNome">Nome</string>
-    <string name="textViewQuantidade">Quantidade</string>
-    <string name="buttonInserir">Inserir</string>
-    <string name="menuItemCadastrar">Cadastrar</string>
-    <string name="appBarSearchConsultar">Consultar</string>
+    <string name="NomeProduto">Nome do Produto:</string>
+    <string name="Quantidade">Quantidade:</string>
+    <string name="Inserir">Inserir</string>
+    <string name="Cadastrar">Cadastrar</string>
+    <string name="Consultar">Consultar</string>
+    <string name="Excluir">Excluir</string>
+    <string name="Atualizar">Atualizar</string>
+    <string name="Vender">Vender</string>
+    <string name="Adicionar">Adicionar</string>
 </resources>

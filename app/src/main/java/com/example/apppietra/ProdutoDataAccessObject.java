@@ -35,4 +35,8 @@ public class ProdutoDataAccessObject {
         }
         return produtos;
     }
+
+    public void excluir(Produto produto) {
+        banco.delete("produto", "nome = ?", new String[]{produto.getNome().toString()});
+    }
 }
