@@ -4,4 +4,6 @@
     <string name="textViewNome">Nome</string>
     <string name="textViewQuantidade">Quantidade</string>
     <string name="buttonInserir">Inserir</string>
+    <string name="menuItemCadastrar">Cadastrar</string>
+    <string name="appBarSearchConsultar">Consultar</string>
 </resources>

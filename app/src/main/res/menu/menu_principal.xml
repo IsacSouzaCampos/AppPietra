@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menuItemCadastrar"
+        android:icon="@android:drawable/ic_input_add"
+        android:title="@string/menuItemCadastrar"
+        app:showAsAction="ifRoom"
+        android:onClick="cadastrar" />
+
+    <item
+        android:id="@+id/appBarSearchConsultar"
+        android:icon="@drawable/ic_search_black_24dp"
+        android:title="@string/appBarSearchConsultar"
+        app:actionViewClass="android.widget.SearchView"
+        app:showAsAction="ifRoom|collapseActionView" />
+</menu>
