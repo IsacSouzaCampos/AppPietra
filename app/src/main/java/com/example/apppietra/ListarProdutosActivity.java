@@ -16,6 +16,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.SearchView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,11 +33,20 @@ public class ListarProdutosActivity extends AppCompatActivity {
         setContentView(R.layout.activity_listar_produtos);
 
         listViewProdutos = findViewById(R.id.listViewProdutos);
+        listViewProdutos.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Toast.makeText(getBaseContext(), "Clicou no item: " + produtos.get(position).getNome(),
+                        Toast.LENGTH_SHORT).show();
+            }
+        });
+
         dao = new ProdutoDataAccessObject(this);
         produtos = dao.obterProdutos();
         produtosFiltrados.addAll(produtos);
-        ArrayAdapter<Produto> adaptador = new ArrayAdapter<>(this,
-                android.R.layout.simple_list_item_1, produtosFiltrados);
+//        ArrayAdapter<Produto> adaptador = new ArrayAdapter<>(this,
+//                android.R.layout.simple_list_item_1, produtosFiltrados);
+        ProdutoAdapter adaptador = new ProdutoAdapter(this, produtosFiltrados);
         listViewProdutos.setAdapter(adaptador);
 
         registerForContextMenu(listViewProdutos);
